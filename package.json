@@ -1,0 +1,17 @@
+{
+  "name": "xsltcompiller",
+  "version": "1.0.0",
+  "description": "Compiller for xslt in xml",
+  "license": "MIT",
+  "author": "CrZTosser3",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^39.2.0",
+    "electron-builder": "^26.0.12"
+  }
+}
