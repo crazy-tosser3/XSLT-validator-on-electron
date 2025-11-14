@@ -7,11 +7,11 @@
 - Требуется Node.js версии 14+.
 - Установить зависимости и запустить приложение:
   - npm install
-  - npm run start (или npm run electron:dev, в зависимости от скриптов)
+  - npm run start (или npm run electron:dev)
 
 ## Структура проекта
-- index.html: основная разметка рендера (UI для XML/XSLT, кнопки, поле вывода)
-- styles.css: стили интерфейса (glass morphism, адаптация под десктоп)
+- index.html: основная разметка рендера
+- styles.css: стили интерфейса
 - main.js: основной процесс Electron
 - convert.js: Для запуска XML преобразований
 
