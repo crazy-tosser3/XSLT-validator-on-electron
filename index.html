@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>XML/XSLT Compiler</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XML XSLT Converter</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 </head>
 <body>
   <header>
-    <button id="convertBtn">Конвертировать</button>
+    <button id="convertBtn">Convert</button>
+    <button id="clearBtn">Clear</button>
   </header>
 
   <div class="main-area">
-    <textarea class="text-box" id="xmlInput" placeholder="XML здесь"></textarea>
-    <textarea class="text-box" id="xsltInput" placeholder="XSLT здесь"></textarea>
+    <div class="inputs-container">
+      <div class="input-section">
+        <h3>XML Input</h3>
+        <div class="input-box">
+          <div class="lines" id="lineNumXML"></div>
+          <div class="code_box" id="codeBoxXML">
+            <pre><code class="language-xml"></code></pre>
+          </div>
+          <textarea class="text-box" id="xmlInput" placeholder="XML здесь"></textarea>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <h3>XSLT Input</h3>
+        <div class="input-box">
+          <div class="lines" id="lineNumXSLT"></div>
+          <textarea class="text-box" id="xsltInput" placeholder="XSLT здесь"></textarea>
+          <div class="code_box" id="codeBoxXSLT">
+            <pre><code class="language-xml"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="output-section">
+      <h3>Result</h3>
+      
+      <div class="output-area" id="result_field">Результат здесь...</div>
+    </div>
   </div>
+  
 
-  <div class="output-area" id="result_field">Результат здесь...</div>
 
+  <script src="tab_handler.js"></script>
+  <script src="syntax.js"></script>
+  <script src="numerate.js"></script>
   <script src="convert.js"></script>
 </body>
 </html>
